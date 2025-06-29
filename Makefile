@@ -128,9 +128,11 @@ pytest:		## run pytest
 	pytest $(MAIN_TEST)
 	@echo "* $(MAG)$(NAME) pytest suite $(YEL)finished$(D):"
 
+MYPY_FLAGS := --install-types --ignore-missing-imports
+
 mypy:			## Run mypy static checker
 	@echo "* $(MAG)$(NAME) $(YEL)running type checker$(D):"
-	mypy $(MAIN)
+	mypy $(MYPY_FLAGS) $(MAIN)
 	@echo "* $(MAG)$(NAME) type checker $(YEL)finished$(D):"
 
 posting:	## Run posting API testing client
