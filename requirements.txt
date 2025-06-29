@@ -1,0 +1,11 @@
+mypy
+pytest
+pytest-env
+black
+rich
+langchain
+langgraph
+langgraph-checkpoint-sqlite
+langchain[ollama]
+langchain-tavily
+transformers
